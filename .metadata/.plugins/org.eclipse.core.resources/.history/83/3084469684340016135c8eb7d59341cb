@@ -1,0 +1,30 @@
+carousel = (function() {
+	var itens = 2;
+	
+	var box = document.querySelector('#carousel');
+	if(!box) return;
+	
+	var ChkItem = 1;
+	formataItem(ChkItem);
+	
+	setInterval(function(){ trocaItem(); }, 3000);
+
+	function trocaItem() {
+		if (ChkItem >= itens) {
+			ChkItem = 1;
+		} else {
+			ChkItem++;
+		}
+		formataItem(ChkItem);
+	}
+
+	function formataItem(n) {
+		box.style.backgroundImage = "url('../../img/promo" + n + ".jpg')";
+		for (var i = 0; i < itens; i++) {
+			if (box.children[i].tagName == "DIV"){
+				box.children[i].style.backgroundColor = "#3A4A95";
+			}
+		}
+		box.querySelector('#tag' + n).style.backgroundColor = "#CCC";
+	}
+})();

@@ -1,0 +1,33 @@
+#carousel{
+	box-shadow: 3px 3px 15px #ccc;
+	border: 1px solid black;
+	height:400px;
+	width:800px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+	vertical-align: bottom;
+	background-image: url("../../img/promo1.jpg");
+	background-repeat: no-repeat;
+	background-size: 500px;
+	background-position: top;
+	
+}
+
+#carousel div{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #3A4A95;
+	display: inline-block;
+	margin: 0 auto;	
+	margin-top: 45%;
+}
+
+#carousel > div ~ div{
+	margin-left: 10px;
+}
+
+#tag1{
+	background-color: #CCC;
+}

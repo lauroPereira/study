@@ -1,0 +1,60 @@
+<!DOCTYPE HTML5>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Trabalho - conex�o com Banco de dados</title>
+	
+	<meta name="description" content="Sistema de banco de dados">
+	<meta name="author" content="Lauro Pereira">
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+    <div id="header">
+		<h1>Locadora</h1>
+	</div>
+	<div id="container">
+		<div id="menu">
+		<form method="POST" target="_self">
+			<ul>
+				<li><input type="submit" value="Home" name="page" /></li>
+				<li><input type="submit" value="Pesquisar Filmes" name="page" /></li>
+				<li><input type="submit" value="Cadastrar Filmes" name="page" /></li>
+				<li><input type="submit" value="Pesquisar Clientes" name="page" /></li>
+				<li><input type="submit" value="Cadastrar Clientes" name="page" /></li>
+			</ul>
+		</form>
+		</div>
+		<div id="main">
+		<?php
+		
+			$module = is_null(filter_input(INPUT_POST, 'page', FILTER_SANITIZE_SPECIAL_CHARS))?'home':filter_input(INPUT_POST, 'page', FILTER_SANITIZE_SPECIAL_CHARS);
+			
+			switch($module){
+				case "Home":
+					echo "<center><h2>Bem vindo a nossa locadora!</h2></center>";
+					break;
+				case "Pesquisar Filmes";
+					require_once($_SERVER['DOCUMENT_ROOT'];'/modules/Filme/listaFilmes.php');
+					break;
+					
+				case "Cadastrar Filmes":
+					echo $module;
+					break;
+				case "Pesquisar Clientes":
+					echo $module;
+					break;
+				case "Cadastrar Clientes":
+					echo $module;
+					break;
+				default:
+					echo "Página não encontrada, contate o administrador!";
+				break;
+			}
+		?>
+		</div>
+	</div>
+</body>
+</html>

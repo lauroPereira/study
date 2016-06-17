@@ -1,0 +1,57 @@
+function ajaxRequest() {
+	var activexmodes = [ "Msxml2.XMLHTTP", "Microsoft.XMLHTTP" ] 
+	if (window.ActiveXObject) { 
+		for (var i = 0; i < activexmodes.length; i++) {
+			try {
+				return new ActiveXObject(activexmodes[i])
+			} catch (e) {
+				console.log(e.getMessage());
+			}
+		}
+	} else if (window.XMLHttpRequest)
+		return new XMLHttpRequest()
+	else
+		return false
+}
+
+main = (function() {
+	var linkHome = document.getElementById('home');
+	var linkProdutos = document.getElementById('home');
+	var linkCadastro = document.getElementById('home');
+	var linkContato = document.getElementById('home');
+
+	linkHome.addEventListener("click", function() {
+		document.post("index.html", {
+			teste : 1
+		}, function(result) {
+			alert(result);
+		});
+	});
+})();
+
+carousel = (function() {
+	var itens = 2;
+	var box = document.querySelector('#carousel');
+	var ChkItem = 0;
+
+	// setInterval(function(){ trocaItem(); }, 3000);
+
+	function trocaItem() {
+		if (ChkItem >= itens) {
+			ChkItem = 1;
+		} else {
+			ChkItem++;
+		}
+		formataItem(ChkItem);
+	}
+
+	function formataItem(n) {
+		box.style.backgroundImage.fadeOut(500);
+		box.style.backgroundImage = "url('../../img/promo" + n + ".jpg')";
+		for (var i = 0; i < itens; i++) {
+			if (box.children[i].tagName == "div")
+				box.children[i].style.backgroundColor = "#3A4A95";
+		}
+		box.querySelector('#tag' + n).style.backgroundColor = "#CCC";
+	}
+})();

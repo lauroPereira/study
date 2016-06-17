@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trabalho 1 de programação Web</title>
+<meta charset="UTF-8">
+<meta name="description" content="Site da empresa imobiliaria">
+<meta name="author" content="Lauro Pereira">
+<link href="../../css/style.css" rel="stylesheet">
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext"
+	rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="carousel">
+
+	</div>
+</body>
+<script src="js/script.js" lang'="text/javascript"></script>
+</html>

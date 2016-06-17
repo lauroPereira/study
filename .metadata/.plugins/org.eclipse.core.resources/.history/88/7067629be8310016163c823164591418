@@ -1,0 +1,23 @@
+#carousel{
+	box-shadow: 3px 3px 15px #ccc;
+	border: 1px solid black;
+	height:400px;
+	width:800px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+#carousel div{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #888;
+	display: inline-block;
+	margin: 0 auto;	
+}
+
+#carousel > div ~ div{
+	
+}

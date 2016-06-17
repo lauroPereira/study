@@ -1,0 +1,15 @@
+#carousel{
+	box-shadow: 3px 3px 15px #ccc;
+	border: 1px solid black;
+	height:400px;
+	width:800px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#carousel div{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: #888;
+}

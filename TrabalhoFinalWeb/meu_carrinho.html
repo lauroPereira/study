@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Trabalho 1 de programação Web</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site da empresa imobiliaria">
+    <meta name="author" content="Lauro Pereira">
+    <link href="style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <h2 class="central">Meu carrinho</h2>
+    <br />
+    <table border="1" class="central">
+        <thead>
+            <th>
+                Produto
+            </th>
+            <th>
+                Quantidade
+            </th>
+            <th>
+                Valor unitário
+            </th>
+            <th>
+                Total
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Produto 1
+                </td>
+                <td>
+                    4
+                </td>
+                <td>
+                    R$ 39,90
+                </td>
+                <td>
+                    R$ 159,69
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Produto 2
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    R$ 139,90
+                </td>
+                <td>
+                    R$ 419,70
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                </td>
+                <td id="total">R$ 579,30</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="voltar" onclick="window.open('index.html');window.close()" />
+</html>

@@ -1,0 +1,232 @@
+body{
+    background-image: url("../img/background.jpg");
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, textarea{
+    background-color: #EFEFFF;
+}
+.central{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.comFundo{
+    position: relative;
+    background-color: rgba(58, 74, 149, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+h2{
+    margin-top: 5em;
+}
+#barraSup{
+    text-align: right;
+    padding-right: 3em;
+    background-image: linear-gradient( to top right, #CCC 5%, #3A4A95 95%);
+    margin-top:-0.5em;  
+    padding-bottom: 0.5em;
+    padding-top: 0.7em;
+}
+
+#barraSup{
+    color: #D8D8D8;
+}
+
+#barraSup a:hover{
+    color: orangered;
+    text-decoration: none;
+}
+#logo{
+    text-align: left; 
+    background-color: #fafafa;   
+    padding-left: 20px;
+}
+
+#logo > div > img[alt=logotipo]{
+    display: inline-block;
+    float: left;
+    margin-top: 8px;
+}
+
+#meio{
+    margin-top: -0.5em;
+    float: right;
+    display: inline-block;
+    width: 900px;
+    text-align: right;  
+}
+
+#carrinho {
+    vertical-align: top;
+    display: inline-block;
+}
+
+#carrinho > a > img[alt~=carrinho]{
+    margin-right: 2em;
+    max-width: 30px;
+}
+
+#carrinho > pre{
+    margin: 0 1em 0 0;
+}
+
+#logo + hr {
+    margin-top: 0;
+}
+
+#busca {
+    color: #D8D8D8;
+    display: inline-block;
+    background-image: linear-gradient( to top left, #3A4A95 10%, #CCC 98%);
+    padding: 0.5em 1em 1em 1em;
+    border-radius: 0 0 20px 5px;
+}
+#busca button{    
+    padding: 1px;
+    text-align: center;
+}
+#busca button img{
+    width: 15px;
+    height: 15px;
+}
+ul{
+   display: inline-block;
+   vertical-align: bottom;
+}
+ul li{
+    display: inline;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #3A4A95;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+ul li a:hover{
+    font-style: italic;
+    text-decoration: none;
+    color: orangered;
+}
+
+#destaques{
+    margin-top: 50px;
+}
+
+#destaques h2{
+    margin-bottom: 0px;
+}
+
+#tipoProd{
+    margin-top: 0px;
+}
+
+#destaques img[alt^=produto] {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.produto{
+    display: inline-block;
+    width: 20%;
+    padding: 1%;
+    margin: 6% 1% 0 1%;
+}
+.produto > pre{
+    text-align: center;
+}
+.add{
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 10px;
+    padding: 3px;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    float: right;
+}
+.formulario{
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.formulario div{
+    line-height: 220%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formulario input[type^=submit]{
+    margin-left:1em;
+    
+}
+
+.formulario input[type^=submit]{
+    float: right;
+    margin-top: 0.5em;
+}
+
+
+#rodape{
+    margin-top: 2em;
+    color: #888;
+    padding: 2em 0 2em 0;
+    background-color: #DDD;
+}
+
+#rodape div a{
+    color: #888;
+    font-weight: lighter;
+}
+
+#rodape div{
+    position: relative;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#rodape div img{
+    position: absolute;
+    right: 0;
+    top: -1.3em;
+    height: 6em;
+}
+
+#descProduto label{
+    font-weight: bold;
+}
+
+table{
+    background-color: rgba(58, 74, 149, 0.5);
+    padding: 2px;
+    border: 2px dashed #3A4A95;
+    text-align: center;
+    table-layout: auto;
+}
+
+table + input{
+    width: 10%;
+    margin-left: 40%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#total{
+    font-weight: bolder;
+}
+
+#conteudo{
+	min-height:240px;
+	width:95%;
+	margin: 0 auto;
+	margin-top:60px;
+}

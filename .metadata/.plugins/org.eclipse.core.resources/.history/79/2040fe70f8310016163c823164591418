@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trabalho 1 de programação Web</title>
+<meta charset="UTF-8">
+<meta name="description" content="Site da empresa imobiliaria">
+<meta name="author" content="Lauro Pereira">
+<link href="css/style.css" rel="stylesheet">
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext"
+	rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="barraSup">
+		<form method="GET" action="" id="formLogin">
+			<label>Login: </label><input type="text" name="login" /> <label>Senha:
+			</label><input type="password" name="senha" /> <input type="submit"
+				value="Acessar" />
+		</form>
+	</div>
+	<div id="corpo">
+		<div id="logo">
+			<img alt="logotipo" src="img/logo_default.png" />
+			<ul id="menuTopo">
+				<li id="home"><a href="#barraSup">Home</a></li>
+				<li id="produtos"><a href="#destaques">Produtos</a></li>
+				<li id="cadastro"><a href="#cadastro">Cadastro</a></li>
+				<li id="contato"><a href="#contato">Fale conosco</a></li>
+			</ul>
+		</div>
+		<hr />
+		<div id="meio">
+			<div id="carrinho">
+				<a onclick="window.open('meu_carrinho.html');window.close()"
+					href="#"><img alt="carrinho de compras"
+					src="img/carrinho_grande.png" /></a>
+				<pre>Carrinho</pre>
+			</div>
+			<div id="busca">
+				<label>Buscar conte&uacute;do: </label> <input type="text"
+					name="busca" />
+				<button id="btnProc">
+					<img alt="botao de consulta" src="img/lupa.png" />
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="conteudo">
+	</div>
+	<div id="rodape">
+		<div class="central">
+			<a
+				href="https://maps.google.com.br/maps?ion=1&espv=2&um=1&ie=UTF-8&q=ifrs+canoas+endere%C3%A7o&fb=1&gl=br&hq=ifrs&hnear=0x95197aa8021e5571:0xd0de460f7518f586,Canoas+-+RS&cid=11785200915308219809&sa=X&ei=Qvo-VYi4J8OIsQS5m4DQCw&ved=0CCYQrwswAA">
+				Endereço: Rua Doutora Maria Zélia Carneiro de Figueiredo, 870 A -
+				Igara III <br />Canoas - RS, CEP:92412-240
+			</a> Telefone:(51) 3415-8200 <br />&copy;copyright 2015. All Rights
+			Reserved <img alt="logotipo" src="img/logo_default.png" />
+		</div>
+	</div>
+</body>
+<script src="js/script.js" lang'="text/javascript"></script>
+</html>

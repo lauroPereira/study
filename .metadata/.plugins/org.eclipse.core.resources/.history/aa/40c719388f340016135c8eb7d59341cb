@@ -1,0 +1,23 @@
+
+<div class="central">
+	<h2 id="contato">Contato</h2>
+	<div class="comFundo formulario">
+		<form method="GET" action="_top" id="formCadastro">
+			<div id="labelsForm">
+				<label>Nome: </label><br /> <label>Sobrenome: </label><br /> <label>e-mail:
+				</label><br /> <label>Telefone: </label><br /> <label>Celular: </label><br />
+				<label>Assunto: </label><br /> <label>Texto: </label><br />
+			</div>
+			<div id="inputForm">
+				<input type="text" name="nome" /><br /> <input type="text"
+					name="sobrenome" /><br /> <input type="email" name="email" /><br />
+				<input type="tel" name="telRes" /><br /> <input type="tel"
+					name="telCel" /><br /> <input type="text" name="assunto" /><br />
+			</div>
+			<textarea name="texto" cols="35" rows="5">
+                    </textarea>
+			<br /> <input type="submit" value="enviar" /> <input type="reset"
+				value="limpar" />
+		</form>
+	</div>
+</div>
