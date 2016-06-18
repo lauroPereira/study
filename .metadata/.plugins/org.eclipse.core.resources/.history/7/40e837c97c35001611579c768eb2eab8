@@ -1,0 +1,32 @@
+<?php
+class Usuario{
+	private $id;
+	private $login;
+	private $nomeCompleto;
+	private $senha;
+	
+	public function getId(){
+		return $this->id;
+	}
+	
+	public function setLogin($login){
+		$this->login = $login;
+	}
+	public function getLogin(){
+		return $this->login;
+	}
+	
+	public function setNomeCompleto($nomeCompleto){
+		$this->nomeCompleto = $nomeCompleto;
+	}
+	public function getNomeCompleto(){
+		return $this->NomeCompleto;
+	}
+	
+	public function setSenha($senha){
+		$this->senha = $senha;
+	}
+	public function getSenha(){
+		return $this->senha;
+	}
+}

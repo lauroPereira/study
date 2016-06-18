@@ -1,0 +1,19 @@
+Layout responsivo
+Página inicial com 
+	formulário de login
+	caixa de busca de produtos
+	menu de categorias de produtos (deve ser dinâmico - Banco de dados)
+	listagem inicial de produtos em destaque (deve ser dinâmico - Banco de dados)
+Formulário Fale Conosco
+Tela específica para detalhar apenas 1 produto
+	botão de compra que manda para a tela do carrinho
+Tela do carrinho de compras
+Validação de formulários em JavaScript
+Carrossel de imagens em JavaScript (sem Framework)
+Formulário de  cadastro (com md5 em PHP)
+Login (com md5 em PHP)
+Conexão ao banco de dados para
+	Carrinho de compras 
+	Finalizar compra
+	Lista de produtos 
+	Busca de produtos 
