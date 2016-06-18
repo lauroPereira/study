@@ -33,8 +33,8 @@ main = (function() {
 	var linkProdutos = document.getElementById('home');
 	var linkCadastro = document.getElementById('home');
 	var linkContato = document.getElementById('home');
-	
-	if(linkHome !== null){
+
+	if (linkHome !== null) {
 		linkHome.addEventListener("click", function() {
 			request.open("POST", "index.php", false);
 			request.setRequestHeader("Content-type",
@@ -46,14 +46,17 @@ main = (function() {
 
 carousel = (function() {
 	var itens = 2;
-	
+
 	var box = document.querySelector('#carousel');
-	if(!box) return;
-	
+	if (!box)
+		return;
+
 	var ChkItem = 1;
 	formataItem(ChkItem);
-	
-	setInterval(function(){ trocaItem(); }, 3000);
+
+	setInterval(function() {
+		trocaItem();
+	}, 9000);
 
 	function trocaItem() {
 		if (ChkItem >= itens) {
@@ -65,12 +68,23 @@ carousel = (function() {
 	}
 
 	function formataItem(n) {
-		box.style.backgroundImage = "url('../../img/promo" + n + ".jpg')";
+		for (var i = 0; i < 9; i++) {
+			setTimeout(function() {
+				box.style.backgroundColor = "rgba(58, 74, 149, 0." + i + ")";
+			}, 500);
+		}
+		box.style.backgroundImage = "url('../../img/carousel/promo" + n
+				+ ".jpg')";
 		for (var i = 0; i < itens; i++) {
-			if (box.children[i].tagName == "DIV"){
+			if (box.children[i].tagName == "DIV") {
 				box.children[i].style.backgroundColor = "#3A4A95";
 			}
 		}
 		box.querySelector('#tag' + n).style.backgroundColor = "#CCC";
+		for (var i = 9; i > 0; i--) {
+			setTimeout(function() {
+				box.style.backgroundColor = "rgba(58, 74, 149, 0." + i + ")";
+			}, 500);
+		}
 	}
 })();

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Trabalho 1 de programaÃ§Ã£o Web</title>
+<title>Trabalho Final de programa&ccedil;&atilde;o Web</title>
 <meta charset="UTF-8">
 <meta name="description" content="Site da empresa imobiliaria">
 <meta name="author" content="Lauro Pereira">
@@ -48,34 +48,35 @@
 	</div>
 	<div id="conteudo">
 		<?php
-			$page = filter_input(INPUT_GET,'pg');
-			$page = (is_null($page))?false:$page;
-			if(!$page)$page=1; 
-			switch($page){
-				case 1:
-					require_once('modules/home/homeView.phtml');
-					break;
-				case 2:
-					require_once('modules/produtos/produtosView.phtml');
-					break;
-				case 3:
-					require_once('modules/cadastro/cadastroView.phtml');
-					break;
-				case 4:
-					require_once('modules/faleConosco/faleConoscoView.phtml');
-					break;
-				default:
-					require_once('modules/home/homeController.php');
-					break;
-			}
+		$page = filter_input ( INPUT_GET, 'pg' );
+		$page = (is_null ( $page )) ? false : $page;
+		if (! $page)
+			$page = 1;
+		switch ($page) {
+			case 1 :
+				require_once ('modules/home/homeView.phtml');
+				break;
+			case 2 :
+				require_once ('modules/produtos/produtosView.phtml');
+				break;
+			case 3 :
+				require_once ('modules/cadastro/cadastroView.phtml');
+				break;
+			case 4 :
+				require_once ('modules/faleConosco/faleConoscoView.phtml');
+				break;
+			default :
+				require_once ('modules/home/homeController.php');
+				break;
+		}
 		?>
 	</div>
 	<div id="rodape">
 		<div class="central">
 			<a
 				href="https://maps.google.com.br/maps?ion=1&espv=2&um=1&ie=UTF-8&q=ifrs+canoas+endere%C3%A7o&fb=1&gl=br&hq=ifrs&hnear=0x95197aa8021e5571:0xd0de460f7518f586,Canoas+-+RS&cid=11785200915308219809&sa=X&ei=Qvo-VYi4J8OIsQS5m4DQCw&ved=0CCYQrwswAA">
-				Endereço: Rua Doutora Maria Zélia Carneiro de Figueiredo, 870 A -
-				Igara III <br />Canoas - RS, CEP:92412-240
+				Endere&ccedil;o: Rua Doutora Maria Z&eacute;lia Carneiro de
+				Figueiredo, 870 A - Igara III <br />Canoas - RS, CEP:92412-240
 			</a> Telefone:(51) 3415-8200 <br />&copy;copyright 2015. All Rights
 			Reserved <img alt="logotipo" src="img/logo_default.png" />
 		</div>
