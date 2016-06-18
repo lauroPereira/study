@@ -5,41 +5,41 @@ class Venda{
 	private $id = int;
 	private $preco = double;
 	private $data = string;
-	private $Usuario = new Usuario();
-	private $Produtos = array(new Produto());
+	private $Usuario = Usuario;
+	private $Produtos = array(Produto);
 	
-	public function setId($id){
+	function setId($id){
 		$this->id = $id;
 	}
-	public function getId(){
+	function getId(){
 		return $this->id;
 	}
 	
-	public function setPreco($preco){
+	function setPreco($preco){
 		$this->preco = $preco;
 	}
-	public function getPreco(){
+	function getPreco(){
 		return $this->preco;
 	}
 	
-	public function setData($data){
+	function setData($data){
 		$this->data = $data;
 	}
-	public function getData(){
+	function getData(){
 		return $this->data;
 	}
 	
-	public function setUsuario($Usuario){
+	function setUsuario($Usuario){
 		$this->Usuario = $Usuario;
 	}
-	public function getUsuario(){
+	function getUsuario(){
 		return $this->Usuario;
 	}
 	
-	public function setProdutos($produtos){
+	function setProdutos($produtos){
 		$this->Produtos = $produtos;
 	}
-	public function getProdutos(){
+	function getProdutos(){
 		return $this->Produtos;
 	}
 }

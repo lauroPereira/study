@@ -151,8 +151,9 @@
           <tags>persp.viewSC:org.eclipse.ui.views.ResourceNavigator</tags>
           <tags>persp.actionSet:org.eclipse.php.ui.text.php.actionSet.presentation</tags>
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_MMB9PjR4Eeag0JuuHoJ7zQ" selectedElement="_MMB9QTR4Eeag0JuuHoJ7zQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_MMB9PjR4Eeag0JuuHoJ7zQ" selectedElement="_MMB9PzR4Eeag0JuuHoJ7zQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_MMB9PzR4Eeag0JuuHoJ7zQ" elementId="topLeft" containerData="2169" selectedElement="_MMB9QDR4Eeag0JuuHoJ7zQ">
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_MMB9QDR4Eeag0JuuHoJ7zQ" elementId="org.eclipse.php.ui.explorer" ref="_MMClvzR4Eeag0JuuHoJ7zQ"/>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_MMB9QTR4Eeag0JuuHoJ7zQ" containerData="7831" selectedElement="_MMB9QjR4Eeag0JuuHoJ7zQ">
@@ -198,14 +199,11 @@
       <children xsi:type="basic:PartStack" xmi:id="_MMCldTR4Eeag0JuuHoJ7zQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_AotdgDWBEeaiIJq5Ei5jUw">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_AotdgDWBEeaiIJq5Ei5jUw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PerfilUsuarioDto.php" iconURI="platform:/plugin/org.eclipse.php.ui/icons/full/obj16/phpfile.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.php.editor&quot; name=&quot;PerfilUsuarioDto.php&quot; partName=&quot;PerfilUsuarioDto.php&quot; title=&quot;PerfilUsuarioDto.php&quot; tooltip=&quot;TrabalhoFinalWeb/database/model/PerfilUsuarioDto.php&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/TrabalhoFinalWeb/database/model/PerfilUsuarioDto.php&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;46&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.php.editor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -322,6 +320,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; isWindowWorkingSet=&quot;true&quot; layout=&quot;1&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.NonScriptProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.SMFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.PHPHTMLFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.NonScriptElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.RSEProjectFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.DotFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.ContainMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.php.ui.explorer.UseStatementFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:PHP Tools</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_MMClwDR4Eeag0JuuHoJ7zQ" elementId="org.eclipse.php.ui.explorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -347,7 +347,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MMCl4jR4Eeag0JuuHoJ7zQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_lXSQYDSTEeaiIJq5Ei5jUw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_MMFDJDR4Eeag0JuuHoJ7zQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_kdJ0czWFEeaWtMTfdJ22og" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_MMFDJDR4Eeag0JuuHoJ7zQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MMCl7zR4Eeag0JuuHoJ7zQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -383,7 +383,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MMCmRTR4Eeag0JuuHoJ7zQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_lXSQajSTEeaiIJq5Ei5jUw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_MMFCrTR4Eeag0JuuHoJ7zQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_kdTlcTWFEeaWtMTfdJ22og" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_MMFCrTR4Eeag0JuuHoJ7zQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MMCmUDR4Eeag0JuuHoJ7zQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

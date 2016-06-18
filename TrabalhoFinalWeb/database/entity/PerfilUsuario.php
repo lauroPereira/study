@@ -3,17 +3,17 @@ class PerfilUsuario{
 	private $id = int;
 	private $perfil = string;
 	
-	public function setId($id){
+	function setId($id){
 		$this->id = $id;
 	}
-	public function getId(){
+	function getId(){
 		return $this->id;
 	}
 	
-	public function setPerfil($perfil){
+	function setPerfil($perfil){
 		$this->perfil = $perfil;
 	}
-	public function getPerfil(){
+	function getPerfil(){
 		return $this->perfil;
 	}
 }

@@ -3,17 +3,17 @@ class TipoProduto{
 	private $id = int;
 	private $tipoProduto = string;
 	
-	public function setId($id){
+	function setId($id){
 		$this->id = $id;
 	}
-	public function getId(){
+	function getId(){
 		return $this->id;
 	}
 	
-	public function setTipoProduto($tipoProduto){
+	function setTipoProduto($tipoProduto){
 		$this->tipoProduto = $tipoProduto;
 	}
-	public function getTipoProduto(){
+	function getTipoProduto(){
 		return $this->tipoProduto;
 	}
 }

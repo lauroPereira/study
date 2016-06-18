@@ -6,40 +6,40 @@ class Usuario{
 	private $login = string;
 	private $nomeCompleto = string;
 	private $senha = string;
-	private $PerfilUsuario = new PerfilUsuario();
+	private $PerfilUsuario = PerfilUsuario;
 	
-	public function setId($id){
+	function setId($id){
 		$this->id = $id;
 	}
-	public function getId(){
+	function getId(){
 		return $this->id;
 	}
 	
-	public function setLogin($login){
+	function setLogin($login){
 		$this->login = $login;
 	}
-	public function getLogin(){
+	function getLogin(){
 		return $this->login;
 	}
 	
-	public function setNomeCompleto($nomeCompleto){
+	function setNomeCompleto($nomeCompleto){
 		$this->nomeCompleto = $nomeCompleto;
 	}
-	public function getNomeCompleto(){
+	function getNomeCompleto(){
 		return $this->NomeCompleto;
 	}
 	
-	public function setSenha($senha){
+	function setSenha($senha){
 		$this->senha = $senha;
 	}
-	public function getSenha(){
+	function getSenha(){
 		return $this->senha;
 	}
 	
-	public function setPerfilUsuario($PerfilUsuario){
+	function setPerfilUsuario($PerfilUsuario){
 		$this->PerfilUsuario = $PerfilUsuario;
 	}
-	public function getPerfilUsuario(){
+	function getPerfilUsuario(){
 		return $this->PerfilUsuario;
 	}
 }

@@ -1,29 +1,28 @@
 <?php
 require_once ('TipoProduto.php');
-
 class Produto{
 	private $id = int;
 	private $dsProduto = string;
-	private $TipoProduto = new TipoProduto();
+	private $TipoProduto = TipoProduto;
 	
-	public function setId($id){
+	function setId($id){
 		$this->id = $id;
 	}
-	public function getId(){
+	function getId(){
 		return $this->id;
 	}
 	
-	public function setDsProduto($dsProduto){
+	function setDsProduto($dsProduto){
 		$this->dsProduto = $dsProduto;
 	}
-	public function getDsProduto(){
+	function getDsProduto(){
 		return $this->dsProduto;
 	}
 	
-	public function setTipoProduto($TipoProduto){
+	function setTipoProduto($TipoProduto){
 		$this->TipoProduto = $TipoProduto;
 	}
-	public function getTipoProduto(){
+	function getTipoProduto(){
 		return $this->TipoProduto;
 	}
 }

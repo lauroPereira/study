@@ -47,6 +47,13 @@
 		</div>
 	</div>
 	<div id="conteudo">
+            <h1><?php
+                //debug
+                require_once ('database/model/PerfilUsuarioDto.php');
+                
+                $p = new PerfilUsuarioDto();
+                var_dump($p->selectAll());
+                ?></h1>
 		<?php
 		$page = filter_input ( INPUT_GET, 'pg' );
 		$page = (is_null ( $page )) ? false : $page;
