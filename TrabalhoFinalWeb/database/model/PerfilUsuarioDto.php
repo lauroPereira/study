@@ -1,5 +1,5 @@
 <?php
-class PerfilUsuario{
+class PerfilUsuarioDto implements Model{
 	private $id = int;
 	private $perfil = string;
 	

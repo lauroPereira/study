@@ -4,7 +4,7 @@ require_once ('TipoProduto.php');
 class Produto{
 	private $id = int;
 	private $dsProduto = string;
-	private $TipoProduto = new TipoProduto();
+	private $TipoProduto = new TipoProduto;
 	
 	public function setId($id){
 		$this->id = $id;

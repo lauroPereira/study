@@ -1,0 +1,45 @@
+<?php
+require_once ('Usuario.php');
+require_once ('Produto.php');
+class Venda{
+	private $id = int;
+	private $preco = double;
+	private $data = string;
+	private $Usuario = new Usuario;
+	private $Produtos = array(new Produto);
+	
+	public function setId($id){
+		$this->id = $id;
+	}
+	public function getId(){
+		return $this->id;
+	}
+	
+	public function setPreco($preco){
+		$this->preco = $preco;
+	}
+	public function getPreco(){
+		return $this->preco;
+	}
+	
+	public function setData($data){
+		$this->data = $data;
+	}
+	public function getData(){
+		return $this->data;
+	}
+	
+	public function setUsuario($usuario){
+		$this->usuario = $usuario;
+	}
+	public function getUsuario(){
+		return $this->usuario;
+	}
+	
+	public function setProdutos($produtos){
+		$this->Produtos = $produtos;
+	}
+	public function getProdutos(){
+		return $this->Produtos;
+	}
+}

@@ -1,10 +1,8 @@
 <?php
-require_once ('TipoProduto.php');
-
 class Produto{
-	private $id = int;
-	private $dsProduto = string;
-	private $TipoProduto = new TipoProduto();
+	private $id;
+	private $dsProduto;
+	private $tipoProduto;
 	
 	public function setId($id){
 		$this->id = $id;
@@ -20,10 +18,10 @@ class Produto{
 		return $this->dsProduto;
 	}
 	
-	public function setTipoProduto($TipoProduto){
-		$this->TipoProduto = $TipoProduto;
+	public function setTipoProduto($tipoProduto){
+		$this->tipoProduto = $tipoProduto;
 	}
 	public function getTipoProduto(){
-		return $this->TipoProduto;
+		return $this->tipoProduto;
 	}
 }
