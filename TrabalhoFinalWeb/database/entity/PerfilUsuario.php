@@ -1,7 +1,7 @@
 <?php
 class PerfilUsuario{
-	private $id = int;
-	private $perfil = string;
+	private $id;
+	private $perfil;
 	
 	function setId($id){
 		$this->id = $id;

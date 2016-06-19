@@ -2,11 +2,11 @@
 require_once ('Usuario.php');
 require_once ('Produto.php');
 class Venda{
-	private $id = int;
-	private $preco = double;
-	private $data = string;
-	private $Usuario = Usuario;
-	private $Produtos = array(Produto);
+	private $id;
+	private $preco;
+	private $data;
+	private $Usuario;
+	private $Produtos;
 	
 	function setId($id){
 		$this->id = $id;

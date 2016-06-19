@@ -2,11 +2,11 @@
 require_once ('PerfilUsuario.php');
 
 class Usuario{
-	private $id = int;
-	private $login = string;
-	private $nomeCompleto = string;
-	private $senha = string;
-	private $PerfilUsuario = PerfilUsuario;
+	private $id;
+	private $login;
+	private $nomeCompleto;
+	private $senha;
+	private $PerfilUsuario;
 	
 	function setId($id){
 		$this->id = $id;

@@ -1,9 +1,10 @@
 <?php
 require_once ('TipoProduto.php');
 class Produto{
-	private $id = int;
-	private $dsProduto = string;
-	private $TipoProduto = TipoProduto;
+	private $id;
+	private $dsProduto;
+        private $preco;
+	private $TipoProduto;
 	
 	function setId($id){
 		$this->id = $id;
@@ -18,7 +19,14 @@ class Produto{
 	function getDsProduto(){
 		return $this->dsProduto;
 	}
-	
+
+	function setPreco($preco){
+		$this->preco = $preco;
+	}
+	function getPreco(){
+		return $this->preco;
+	}
+        
 	function setTipoProduto($TipoProduto){
 		$this->TipoProduto = $TipoProduto;
 	}

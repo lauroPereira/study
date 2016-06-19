@@ -1,9 +1,9 @@
 <?php
 require_once 'Dto.php';
 require_once 'database/Database.php';
-require_once 'database/entity/PerfilUsuario.php'; 
+require_once 'database/entity/TipoProduto.php'; 
                 
-class PerfilUsuarioDto implements Dto{
+class TipoProdutoDto implements Dto{
     
     private $con;
     
@@ -14,16 +14,16 @@ class PerfilUsuarioDto implements Dto{
     
     function selectAll(){
         $result = array();
-        $return = $this->con->query("SELECT * FROM perfil");
+        $return = $this->con->query("SELECT * FROM tipo");
         
         for($i=0;$i<$return->num_rows;$i++){
-            $perfil = new PerfilUsuario();
+            $tipoProduto = new TipoProduto();
             
-            $perfil->setId($return->fetch_array()["id_perfil"]);
-            $perfil->setPerfil($return->fetch_array()["ds_perfil"]);
+            $tipoProduto->setId($return->fetch_array()["id_tipo"]);
+            $tipoProduto->setTipoProduto($return->fetch_array()["ds_tipo"]);
             
             array_push($result, array(
-                $perfil
+                $tipoProduto
             ));
         }
         
@@ -40,14 +40,16 @@ class PerfilUsuarioDto implements Dto{
          */
     }
     function find($id){
-        $return = $this->con->query("SELECT * FROM perfil WHERE id = ". $id);
+        $sql = "SELECT * FROM tipo WHERE id_tipo = ". $id;
         
-        $perfil = new PerfilUsuario();
+        $return = $this->con->query($sql);
+        
+        $tipoProduto = new TipoProduto();
             
-        $perfil->setId($return->fetch_array()["id_perfil"]);
-        $perfil->setPerfil($return->fetch_array()["ds_perfil"]);
-            
-        return $perfil;
+        $tipoProduto->setId($return->fetch_array()["id_tipo"]);
+        $tipoProduto->setTipoProduto($return->fetch_array()["ds_tipo"]);
+        echo 'teste ' . var_dump($sql) . '<br/>';    
+        return $tipoProduto;
     }
     function update(){
         /*

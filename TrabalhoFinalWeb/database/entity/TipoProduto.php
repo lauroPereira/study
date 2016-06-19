@@ -1,7 +1,7 @@
 <?php
 class TipoProduto{
-	private $id = int;
-	private $tipoProduto = string;
+	private $id;
+	private $tipoProduto;
 	
 	function setId($id){
 		$this->id = $id;
