@@ -40,12 +40,16 @@ class PerfilUsuarioDto implements Dto{
          */
     }
     function find($id){
-        $return = $this->con->query("SELECT * FROM perfil WHERE id = ". $id);
+        
+        $sql = "SELECT * FROM perfil WHERE id = ". $id;
+        
+        $return = $this->con->query($sql);
+        $result = $return->fetch_assoc();
         
         $perfil = new PerfilUsuario();
             
-        $perfil->setId($return->fetch_array()["id_perfil"]);
-        $perfil->setPerfil($return->fetch_array()["ds_perfil"]);
+        $perfil->setId($result["id_perfil"]);
+        $perfil->setPerfil($result["ds_perfil"]);
             
         return $perfil;
     }

@@ -13,21 +13,22 @@ class TipoProdutoDto implements Dto{
     }
     
     function selectAll(){
-        $result = array();
-        $return = $this->con->query("SELECT * FROM tipo");
-        
+        $resultMap = array();
+        $sql = "SELECT * FROM tipo";
+        $return = $this->con->query($sql);
+        $result = $return->fetch_assoc();
         for($i=0;$i<$return->num_rows;$i++){
             $tipoProduto = new TipoProduto();
             
-            $tipoProduto->setId($return->fetch_array()["id_tipo"]);
-            $tipoProduto->setTipoProduto($return->fetch_array()["ds_tipo"]);
+            $tipoProduto->setId($result["id_tipo"]);
+            $tipoProduto->setTipoProduto($result["ds_tipo"]);
             
-            array_push($result, array(
+            array_push($resultMap, array(
                 $tipoProduto
             ));
         }
         
-        return $result;
+        return $resultMap;
     }
     function select($map){
         /*
@@ -45,10 +46,11 @@ class TipoProdutoDto implements Dto{
         $return = $this->con->query($sql);
         
         $tipoProduto = new TipoProduto();
-            
-        $tipoProduto->setId($return->fetch_array()["id_tipo"]);
-        $tipoProduto->setTipoProduto($return->fetch_array()["ds_tipo"]);
-        echo 'teste ' . var_dump($sql) . '<br/>';    
+        $result = $return->fetch_assoc();
+        
+        $tipoProduto->setId($result["id_tipo"]);
+        $tipoProduto->setTipoProduto($result["ds_tipo"]);
+        
         return $tipoProduto;
     }
     function update(){

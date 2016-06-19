@@ -88,15 +88,18 @@ class ProdutoDto implements Dto{
          */
     }
     function find($id){
-        $return = $this->con->query("SELECT * FROM produto WHERE id_produto = ". $id);
+        $sql = "SELECT * FROM produto WHERE id_produto = ". $id;
+        
+        $return = $this->con->query($sql);
+        $result = $return->fetch_assoc();
         
         $produto = new Produto();
         $tipoDto = new TipoProdutoDto();
             
-        $produto->setId($return->fetch_array()["id_produto"]);
-        $produto->setDsProduto($return->fetch_array()["ds_produto"]);
-        $produto->setPreco($return->fetch_array()["preco"]);
-        $produto->setTipoProduto($tipoDto->find($return->fetch_array()["id_tipo"]));
+        $produto->setId($result["id_produto"]);
+        $produto->setDsProduto($result["ds_produto"]);
+        $produto->setPreco($result["preco"]);
+        $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
         return $produto;
     }

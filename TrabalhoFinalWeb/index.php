@@ -48,21 +48,18 @@
 	</div>
         <?php
             //debug
-            require_once ('database/model/ProdutoDto.php');
+        /*
+            require_once ('database/model/TipoProdutoDto.php');
             
-            $p = new ProdutoDto();
-            $map = array("ds_produto" =>"p");
-            $array = $p->select($map);
+            $p = new TipoProdutoDto();
             
-            foreach ($array as $v){
-                foreach ($v as $vlr){
+            $array = $p->selectAll();
+            
+            foreach ($array as $vlr){
                     echo 'id: ' . $vlr->getId() . '<br />';
-                    echo 'nome: ' . $vlr->getDsProduto() . '<br />';
-                    echo 'preco: ' . $vlr->getPreco() . '<br />';
-                    echo 'tipo: ' . $vlr->getTipoProduto()->getTipoProduto(). '<br />';
+                    echo 'tipo: ' . $vlr->getTipoProduto(). '<br />';
                     echo '<br />';
-                }
-            }
+            }*/
         ?>
 	<div id="conteudo">
 		<?php
