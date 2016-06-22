@@ -1,5 +1,4 @@
 <?php
-require_once ('TipoProduto.php');
 class Produto{
 	private $id;
 	private $dsProduto;

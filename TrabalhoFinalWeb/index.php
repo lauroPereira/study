@@ -48,18 +48,21 @@
 	</div>
         <?php
             //debug
-        /*
-            require_once ('database/model/TipoProdutoDto.php');
+        
+            require_once ('database/model/UsuarioDto.php');
             
-            $p = new TipoProdutoDto();
+            $p = new UsuarioDto();
             
             $array = $p->selectAll();
             
             foreach ($array as $vlr){
                     echo 'id: ' . $vlr->getId() . '<br />';
-                    echo 'tipo: ' . $vlr->getTipoProduto(). '<br />';
+                    echo 'nome: ' . $vlr->getNomeCompleto() . '<br />';
+                    echo 'perfil: ' . $vlr->getPerfilUsuario()->getPerfil() . '<br />';
+                    echo 'login: ' . $vlr->getLogin() . '<br />';
+                    echo 'senha: ' . $vlr->getSenha(). '<br />';
                     echo '<br />';
-            }*/
+            }
         ?>
 	<div id="conteudo">
 		<?php

@@ -1,46 +1,45 @@
 -- Geração de Modelo físico
 -- Sql ANSI 2003 - brModelo.
 
-
-
 CREATE TABLE PRODUTO (
-id_produto int not null AUTO_INCREMENT,
-ds_produto varchar(200) not null,
-preco double not null,
-id_tipo int not null,
-PRIMARY KEY (id_produto)
+id_produto int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+ds_produto varchar(200) NOT NULL,
+preco double NOT NULL,
+id_tipo int NOT NULL
 );
 
 CREATE TABLE USUARIO (
-id_usuario int not null AUTO_INCREMENT,
-senha varchar(250) not null,
-nome_completo varchar(250) not null,
-login varchar(100) not null,
-id_perfil int not null,
-PRIMARY KEY (id_usuario)
+id_usuario int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+senha varchar(250) NOT NULL,
+nome_completo varchar(250) NOT NULL,
+login varchar(100) NOT NULL,
+id_perfil int NOT NULL
 );
 
 CREATE TABLE TIPO (
-id_tipo int not null AUTO_INCREMENT,
-ds_tipo varchar(100) not null,
-PRIMARY KEY (id_tipo)
+id_tipo int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+ds_tipo varchar(100) NOT NULL
 );
 
 CREATE TABLE PERFIL (
-id_perfil int not null AUTO_INCREMENT,
-ds_perfil varchar(100) not null,
-PRIMARY KEY (id_perfil)
+id_perfil int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+ds_perfil varchar(100) NOT NULL
 );
 
 CREATE TABLE VENDA (
-id_venda int not null AUTO_INCREMENT,
-preco_corrente double not null,
-dt_venda datetime null,
-id_usuario int not null,
-id_produto int not null,
-FOREIGN KEY(id_usuario) REFERENCES USUARIO (id_usuario),
-FOREIGN KEY(id_produto) REFERENCES PRODUTO (id_produto),
-PRIMARY KEY (id_venda)
+id_venda int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+dt_conclusao_venda datetime NULL,
+id_usuario int NOT NULL,
+FOREIGN KEY(id_usuario) REFERENCES USUARIO (id_usuario)
+);
+
+CREATE TABLE VENDA_ITEM (
+id_venda_item int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+preco_corrente double NOT NULL,
+dt_inclusao_item datetime NOT NULL,
+id_produto int NOT NULL,
+id_venda int NOT NULL,
+FOREIGN KEY(id_produto) REFERENCES PRODUTO (id_produto)
 );
 
 ALTER TABLE PRODUTO ADD FOREIGN KEY(id_tipo) REFERENCES TIPO (id_tipo);

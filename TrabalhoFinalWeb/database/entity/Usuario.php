@@ -1,5 +1,4 @@
 <?php
-require_once ('PerfilUsuario.php');
 
 class Usuario{
 	private $id;
@@ -26,7 +25,7 @@ class Usuario{
 		$this->nomeCompleto = $nomeCompleto;
 	}
 	function getNomeCompleto(){
-		return $this->NomeCompleto;
+		return $this->nomeCompleto;
 	}
 	
 	function setSenha($senha){

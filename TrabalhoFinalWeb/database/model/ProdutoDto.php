@@ -14,73 +14,65 @@ class ProdutoDto implements Dto{
     }
     
     function selectAll(){
-        $result = array();
-        $return = $this->con->query("SELECT * FROM produto");
+        $resultMap = array();
+        $sql = "SELECT * FROM produto";
         
-        for($i=0;$i<$return->num_rows;$i++){
+        $return = $this->con->query($sql);
+        
+        while($result = $return->fetch_assoc()){
             $produto = new Produto();
             $tipoDto = new TipoProdutoDto();
             
-            $produto->setId($return->fetch_array()["id_produto"]);
-            $produto->setDsProduto($return->fetch_array()["ds_produto"]);
-            $produto->setPreco($return->fetch_array()["preco"]);
-            $produto->setTipoProduto($tipoDto->find($return->fetch_array()["id_tipo"]));
+            $produto->setId($result["id_produto"]);
+            $produto->setDsProduto($result["ds_produto"]);
+            $produto->setPreco($result["preco"]);
+            $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
-            array_push($result, array(
-                $produto
-            ));
+            array_push($resultMap, $produto);
         }
         
-        return $result;
+        return $resultMap;
     }
     
     private function preparaSql($array){
         $sql = "SELECT * FROM produto WHERE 1 = 1 ";
         
-        if(isset($array["ds_produto"]) && !empty(preg_replace('/[^a-z0-9]/i', '', $array["ds_produto"]))){
-            $sql .= "AND ds_produto like '%" . preg_replace('/[^a-z0-9]/i', '', $array["ds_produto"]) . "%' ";
+        if(isset($array["ds_produto"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["ds_produto"]))){
+            $sql .= "AND ds_produto like '%" . preg_replace('/[ \t\n\r\f\v]/i', '', $array["ds_produto"]) . "%' ";
         }
-        if(isset($array["preco_menor"]) && !empty(preg_replace('/[^0-9]/i', '', $array["preco_menor"]))){
-            $sql .= "AND preco <= " . preg_replace('/[^0-9]/i', '', $array["preco_menor"]) . " ";
+        if(isset($array["preco_menor"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_menor"]))){
+            $sql .= "AND preco <= " . preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_menor"]) . " ";
         }
-        if(isset($array["preco_maior"]) && !empty(preg_replace('/[^0-9]/i', '', $array["preco_maior"]))){
-            $sql .= "AND preco >= " . preg_replace('/[^0-9]/i', '', $array["preco_maior"]) . " ";
+        if(isset($array["preco_maior"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_maior"]))){
+            $sql .= "AND preco >= " . preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_maior"]) . " ";
         }
-        if(isset($array["id_tipo"]) && !empty(preg_replace('/[^0-9]/i', '', $array["id_tipo"]))){
-            $sql .= "AND id_tipo = " . preg_replace('/[^0-9]/i', '', $array["id_tipo"]) . " ";
+        if(isset($array["id_tipo"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["id_tipo"]))){
+            $sql .= "AND id_tipo = " . preg_replace('/[ \t\n\r\f\v]/i', '', $array["id_tipo"]) . " ";
         }
         
         return $sql;
     }
     
     function select($map){
-        $result = array();
+        $resultMap = array();
         
         $sql = $this->preparaSql($map);
         $return = $this->con->query($sql);
         
-        while ($row = mysqli_fetch_assoc($return)) {
+        while($result = $return->fetch_assoc()){
             $produto = new Produto();
             $tipoDto = new TipoProdutoDto();
-            $tipo = new TipoProduto();
             
-            $produto->setId($row["id_produto"]);
-            $produto->setDsProduto($row["ds_produto"]);
-            $produto->setPreco($row["preco"]);
-            //$tipoDto->find($row["id_tipo"])
-            $tipo = $tipoDto->find($row["id_tipo"]);
-            $produto->setTipoProduto($tipo);
+            $produto->setId($result["id_produto"]);
+            $produto->setDsProduto($result["ds_produto"]);
+            $produto->setPreco($result["preco"]);
+            $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
-            array_push($result, array(
-                $produto
-            ));
+            array_push($resultMap, $produto);
         }
         
-        for($i=0;$i<$return->num_rows;$i++){
-            
-        }
+        return $resultMap;
         
-        return $result;
     }
     function count(){
         /*

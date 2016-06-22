@@ -15,17 +15,17 @@ class TipoProdutoDto implements Dto{
     function selectAll(){
         $resultMap = array();
         $sql = "SELECT * FROM tipo";
+
         $return = $this->con->query($sql);
-        $result = $return->fetch_assoc();
-        for($i=0;$i<$return->num_rows;$i++){
+
+        while($result = $return->fetch_assoc()){
+            
             $tipoProduto = new TipoProduto();
             
             $tipoProduto->setId($result["id_tipo"]);
             $tipoProduto->setTipoProduto($result["ds_tipo"]);
             
-            array_push($resultMap, array(
-                $tipoProduto
-            ));
+            array_push($resultMap, $tipoProduto);
         }
         
         return $resultMap;
