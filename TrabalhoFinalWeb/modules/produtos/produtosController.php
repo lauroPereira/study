@@ -1,12 +1,11 @@
 <?php
 require_once 'database/model/ProdutoDto.php';
 require_once 'database/model/TipoProdutoDto.php';
-require_once 'produtosView.phtml';
 
 class produtosController{
 
     private $view;
-    public static $params;
+    public $params;
 
     function __construct() {
         $this->params = array();
@@ -19,8 +18,6 @@ class produtosController{
         $this->params["tipos"] = array();
         $tipoDto = new TipoProdutoDto();
         $this->params["tipos"] = $tipoDto->selectAll();
-        
-        $this->display();
     }
     
     function display(){

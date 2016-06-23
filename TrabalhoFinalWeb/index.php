@@ -67,7 +67,8 @@
 				break;
 			case 2 :
 				//require_once ('modules/produtos/produtosView.phtml');
-                                $modulo = new produtosController();
+                            $modulo = new produtosController();
+                            $modulo->display();
 				break;
 			case 3 :
 				require_once ('modules/cadastro/cadastroView.phtml');

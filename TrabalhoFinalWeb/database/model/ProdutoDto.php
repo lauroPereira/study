@@ -26,6 +26,8 @@ class ProdutoDto implements Dto{
             $produto->setId($result["id_produto"]);
             $produto->setDsProduto($result["ds_produto"]);
             $produto->setPreco($result["preco"]);
+            $produto->setLinkImage($result["link_image"]);
+            $produto->setFlDestaque($result["fl_destaque"]);
             $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
             array_push($resultMap, $produto);
@@ -39,6 +41,10 @@ class ProdutoDto implements Dto{
         
         if(isset($array["ds_produto"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["ds_produto"]))){
             $sql .= "AND ds_produto like '%" . preg_replace('/[ \t\n\r\f\v]/i', '', $array["ds_produto"]) . "%' ";
+        }
+        
+        if(isset($array["fl_destaque"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["fl_destaque"]))){
+            $sql .= "AND fl_destaque like '%" . preg_replace('/[ \t\n\r\f\v]/i', '', $array["fl_destaque"]) . "%' ";
         }
         if(isset($array["preco_menor"]) && !empty(preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_menor"]))){
             $sql .= "AND preco <= " . preg_replace('/[ \t\n\r\f\v]/i', '', $array["preco_menor"]) . " ";
@@ -66,6 +72,8 @@ class ProdutoDto implements Dto{
             $produto->setId($result["id_produto"]);
             $produto->setDsProduto($result["ds_produto"]);
             $produto->setPreco($result["preco"]);
+            $produto->setLinkImage($result["link_image"]);
+            $produto->setFlDestaque($result["fl_destaque"]);
             $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
             array_push($resultMap, $produto);
@@ -91,6 +99,8 @@ class ProdutoDto implements Dto{
         $produto->setId($result["id_produto"]);
         $produto->setDsProduto($result["ds_produto"]);
         $produto->setPreco($result["preco"]);
+        $produto->setLinkImage($result["link_image"]);
+        $produto->setFlDestaque($result["fl_destaque"]);
         $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
             
         return $produto;
