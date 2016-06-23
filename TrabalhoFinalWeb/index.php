@@ -47,35 +47,27 @@
 		</div>
 	</div>
         <?php
-            //debug
-        
-            require_once ('database/model/UsuarioDto.php');
-            
-            $p = new UsuarioDto();
-            
-            $array = $p->selectAll();
-            
-            foreach ($array as $vlr){
-                    echo 'id: ' . $vlr->getId() . '<br />';
-                    echo 'nome: ' . $vlr->getNomeCompleto() . '<br />';
-                    echo 'perfil: ' . $vlr->getPerfilUsuario()->getPerfil() . '<br />';
-                    echo 'login: ' . $vlr->getLogin() . '<br />';
-                    echo 'senha: ' . $vlr->getSenha(). '<br />';
-                    echo '<br />';
-            }
+            require_once ('modules/produtos/produtosController.php');
+//            require_once ('modules/cadastro/cadastroController.php');
+//            require_once ('modules/carrinho/carrinhoController.php');
+//            require_once ('modules/faleConosco/faleConoscoController.php');
+//            require_once ('modules/home/homeController.php');
+//            require_once ('modules/login/loginController.php');
         ?>
 	<div id="conteudo">
 		<?php
 		$page = filter_input ( INPUT_GET, 'pg' );
 		$page = (is_null ( $page )) ? false : $page;
-		if (! $page)
+		if (!$page)
 			$page = 1;
 		switch ($page) {
 			case 1 :
+                                unset($modulo);
 				require_once ('modules/home/homeView.phtml');
 				break;
 			case 2 :
-				require_once ('modules/produtos/produtosView.phtml');
+				//require_once ('modules/produtos/produtosView.phtml');
+                                $modulo = new produtosController();
 				break;
 			case 3 :
 				require_once ('modules/cadastro/cadastroView.phtml');

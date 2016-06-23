@@ -1,0 +1,37 @@
+insert into tipo (ds_tipo) values ('scooter');
+insert into tipo (ds_tipo) values ('sport');
+insert into tipo (ds_tipo) values ('custom');
+insert into tipo (ds_tipo) values ('chopper');
+insert into tipo (ds_tipo) values ('off-road');
+insert into tipo (ds_tipo) values ('street');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Honda biz 100cc', 7000, 1, '','N');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Suzuki Burgman 124cc', 7970, 1, '','N');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Honda CG Fan 125cc', 6088, 6, '','N');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Kawasaki Ninja 1000cc', 56945, 2, '','S');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Kawasaki Vulcan 900cc', 34830, 3, '','S');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Kasinski Mirage 250cc', 13990, 3, '','N');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Honda CRF 230cc', 12500, 5, '','N');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Yamaha YZF-R1 998cc', 60950, 2, '','S');
+
+insert into produto (ds_produto, preco, id_tipo, link_image, fl_destaque)
+values('Dafra Kansas 150cc', 6890, 4, '','N');
+
+insert into perfil (ds_perfil) values ('default');
+insert into perfil (ds_perfil) values ('admin');
+insert into perfil (ds_perfil) values ('master');

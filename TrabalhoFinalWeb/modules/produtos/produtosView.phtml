@@ -1,10 +1,14 @@
 <div id="destaques" class="central">
 	<h2>Destaques</h2>
+        <?php
+                            foreach(produtosController::$params["tipo"] as $vlr){
+                                var_dump($vlr);
+                            }
+                        ?>
 	<div id="tipoProd">
 		<label>Tipo: </label> <select name="tipoProduto">
 			<option value="0" selected>Selecione</option>
-			<option value="2">Pares</option>
-			<option value="1">Impares</option>
+			
 		</select>
 	</div>
 	<a href="#"><div onclick="window.open('produto1.html');window.close()"

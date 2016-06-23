@@ -5,7 +5,9 @@ CREATE TABLE PRODUTO (
 id_produto int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 ds_produto varchar(200) NOT NULL,
 preco double NOT NULL,
-id_tipo int NOT NULL
+id_tipo int NOT NULL,
+link_image varchar(100) not null,
+fl_destaque char(1) not null
 );
 
 CREATE TABLE USUARIO (
