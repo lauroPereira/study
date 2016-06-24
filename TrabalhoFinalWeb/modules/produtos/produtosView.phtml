@@ -5,23 +5,24 @@
                 <select name="tipoProduto">
                     <option value="0" selected>Selecione</option>
                     <?php 
-                        foreach ($this->params["tipos"] as $vlr){
-                            echo '<option value="'.$vlr->getId().'" selected>'.$vlr->getTipoProduto().'</option>';
+                        $tipo = new TipoProduto();
+                        foreach ($this->params["tipos"] as $tipo){
+                            echo '<option value="'.$tipo->getId().'">'.$tipo->getTipoProduto().'</option>';
                         }
                     ?>
 		</select>
 	</div>
 	<?php 
-            foreach ($this->params["produtos"] as $vlr){ ?>
-                
-                </a> <a href="#"><div
-			onclick="window.open('produto2.html');window.close()" id="produto_<?php $vlr->getId()?>"
+            $produto = new Produto();
+            foreach ($this->params["produtos"] as $produto){ ?>
+                <div
+			onclick="darkerShow();" id="produto_<?php echo $produto->getId();?>"
 			class="produto comFundo">
 			<img alt="adiciona produto" src="img/carrinho_peq.png" class="add" /><img
-				alt="produto2" src="img/<?php $vlr->getLinkImage()?>" />
-			<pre><?php $vlr->getDsProduto()?></pre>
-                        <pre><?php $vlr->getPreco()?></pre>
-                        <pre><?php $vlr->getTipoProduto()->getTipoProduto()?></pre>
-		</div></a>
+				alt="produto2" src="img/produtos/<?php echo $produto->getLinkImage();?>" />
+			<pre><?php echo $produto->getDsProduto();?></pre>
+                        <pre><?php echo $produto->getPreco();?></pre>
+                        
+		</div>
             <?php }?>
 </div>

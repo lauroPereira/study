@@ -1,3 +1,4 @@
+/*
 function ajaxRequest() {
 	var activexmodes = [ "Msxml2.XMLHTTP", "Microsoft.XMLHTTP" ]
 	if (window.ActiveXObject) {
@@ -43,6 +44,36 @@ main = (function() {
 		});
 	}
 })();
+*/
+
+function ajustaTamanho(obj){
+    
+    var x = document.body.scrollWidth || document.body.offsetWidth;
+    var y = document.body.scrollHeight || document.body.offsetHeight;
+    
+    obj.style.width  = x + 'px';
+    obj.style.height = y + 'px';
+};
+
+function darkerShow(){
+    var darker = document.getElementById('darker');
+    ajustaTamanho(darker);
+    if(darker.className === "darker_disabled"){
+        darker.className ="darker_enabled";
+    }else{
+        darker.className ="darker_disabled";
+    }
+}
+
+function darkerHide(){
+    var darker = document.getElementById('darker');
+    ajustaTamanho(darker);
+    if(darker.className === "darker_enabled"){
+        darker.className ="darker_disabled";
+    }else{
+        darker.className ="darker_enabled";
+    }
+}
 
 carousel = (function() {
 	var itens = 2;
@@ -76,7 +107,7 @@ carousel = (function() {
 		box.style.backgroundImage = "url('../../img/carousel/promo" + n
 				+ ".jpg')";
 		for (var i = 0; i < itens; i++) {
-			if (box.children[i].tagName == "DIV") {
+			if (box.children[i].tagName === "DIV") {
 				box.children[i].style.backgroundColor = "#3A4A95";
 			}
 		}

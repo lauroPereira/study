@@ -11,7 +11,7 @@
 	rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="darker"></div>
+    <div onclick="darkerHide();" id="darker" class="darker_disabled"></div>
 	<div id="barraSup">
 		<form method="GET" action="" id="formLogin">
 			<label>Login: </label><input type="text" name="login" /> <label>Senha:

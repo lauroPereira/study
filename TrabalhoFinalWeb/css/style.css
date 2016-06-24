@@ -12,14 +12,14 @@ input, textarea {
 
 #darker {
 	background: rgba(0, 0, 0, 0.6);
-	display: none;
-	width: 100%;
-	height: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
 	z-index: 99998;
 }
+
+.darker_disabled {
+	display: none;
+}
+.darker_enabled {}
 
 .central {
 	width: 70%;
