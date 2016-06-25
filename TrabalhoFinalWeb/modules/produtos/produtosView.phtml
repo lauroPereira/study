@@ -2,7 +2,7 @@
 	<h2>Destaques</h2>
 	<div id="tipoProd">
 		<label>Tipo: </label>
-                <select name="tipoProduto">
+                <select name="tipoProduto" onselect="alert(itemSelecionado);">
                     <option value="0" selected>Selecione</option>
                     <?php 
                         $tipo = new TipoProduto();
@@ -11,6 +11,8 @@
                         }
                     ?>
 		</select>
+                <pre>filtro:</pre>
+                <pre><?php echo filter_input( INPUT_COOKIE, 'tp_prd', FILTER_SANITIZE_SPECIAL_CHARS ); ?></pre>
 	</div>
 	<?php 
             $produto = new Produto();

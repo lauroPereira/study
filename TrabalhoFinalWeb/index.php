@@ -55,32 +55,34 @@
 //            require_once ('modules/login/loginController.php');
         ?>
 	<div id="conteudo">
-		<?php
+            <?php
+                $modulo = NULL;
 		$page = filter_input ( INPUT_GET, 'pg' );
 		$page = (is_null ( $page )) ? false : $page;
-		if (!$page)
-			$page = 1;
+		
+                if (!$page) $page = 1;
+                
 		switch ($page) {
-			case 1 :
-                                unset($modulo);
-				require_once ('modules/home/homeView.phtml');
-				break;
-			case 2 :
-				//require_once ('modules/produtos/produtosView.phtml');
+                    case 1 :
+                        require_once ('modules/home/homeView.phtml');
+                        break;
+                    case 2 :
+                        if(!($modulo instanceof produtosController)){
                             $modulo = new produtosController();
-                            $modulo->display();
-				break;
-			case 3 :
-				require_once ('modules/cadastro/cadastroView.phtml');
-				break;
-			case 4 :
-				require_once ('modules/faleConosco/faleConoscoView.phtml');
-				break;
-			default :
-				require_once ('modules/home/homeController.php');
-				break;
+                        }
+                        $modulo->display();
+                        break;
+                    case 3 :
+                        require_once ('modules/cadastro/cadastroView.phtml');
+                        break;
+                    case 4 :
+                        require_once ('modules/faleConosco/faleConoscoView.phtml');
+                        break;
+                    default :
+                        require_once ('modules/home/homeController.php');
+                        break;
 		}
-		?>
+            ?>
 	</div>
 	<div id="rodape">
 		<div class="central">
