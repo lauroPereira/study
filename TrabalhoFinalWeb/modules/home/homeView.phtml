@@ -1,4 +1,15 @@
 <div id="carousel">
-	<div class="tag" id="tag1"></div>
-	<div class="tag" id="tag2"></div>
+    <?php 
+        $n = 0;
+        foreach ($this->params as $img){
+            $urls[] = "url(\"img/produtos/" . $img->getLinkImage() ."\")";
+            echo '<div class="tag" id="tag'.$n.'" ></div>';
+            $n++;
+        }
+    ?>
+    
 </div>
+
+<script lang="text/javascript">
+    document.cookie = 'imgs=' + '<?php echo implode(',', $urls);?>';
+</script>
