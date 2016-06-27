@@ -26,6 +26,7 @@ class UsuarioDto implements Dto{
             $usuario->setId($result["id_usuario"]);
             $usuario->setLogin($result["login"]);
             $usuario->setNomeCompleto($result["nome_completo"]);
+            $usuario->setEmail($result["email"]);
             $usuario->setPerfilUsuario($perfilDto->find($result["id_perfil"]));
             $usuario->setSenha($result["senha"]);
 
@@ -67,6 +68,7 @@ class UsuarioDto implements Dto{
             $usuario->setId($result["id_usuario"]);
             $usuario->setLogin($result["login"]);
             $usuario->setNomeCompleto($result["nome_completo"]);
+            $usuario->setEmail($result["email"]);
             $usuario->setPerfilUsuario($perfilDto->find($result["id_perfil"]));
             $usuario->setSenha($result["senha"]);
 
@@ -82,20 +84,22 @@ class UsuarioDto implements Dto{
          */
     }
     function find($id){
-        $sql = "SELECT * FROM produto WHERE id_produto = ". $id;
+        $sql = "SELECT * FROM usuario WHERE id_usuario = ". $id;
         
         $return = $this->con->query($sql);
         $result = $return->fetch_assoc();
         
-        $produto = new Produto();
-        $tipoDto = new TipoProdutoDto();
+        $usuario = new Usuario();
+        $perfilDto = new PerfilUsuarioDto();
+
+        $usuario->setId($result["id_usuario"]);
+        $usuario->setLogin($result["login"]);
+        $usuario->setNomeCompleto($result["nome_completo"]);
+        $usuario->setEmail($result["email"]);
+        $usuario->setPerfilUsuario($perfilDto->find($result["id_perfil"]));
+        $usuario->setSenha($result["senha"]);
             
-        $produto->setId($result["id_produto"]);
-        $produto->setDsProduto($result["ds_produto"]);
-        $produto->setPreco($result["preco"]);
-        $produto->setTipoProduto($tipoDto->find($result["id_tipo"]));
-            
-        return $produto;
+        return $usuario;
     }
     function update(){
         /*

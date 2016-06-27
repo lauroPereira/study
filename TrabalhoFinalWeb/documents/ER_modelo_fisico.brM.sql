@@ -14,7 +14,8 @@ CREATE TABLE USUARIO (
 id_usuario int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 senha varchar(250) NOT NULL,
 nome_completo varchar(250) NOT NULL,
-login varchar(100) NOT NULL,
+email varchar(200) NULL,
+login varchar(100) NOT NULL UNIQUE,
 id_perfil int NOT NULL
 );
 

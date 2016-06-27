@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="0"/>
-		<TotalItens Valor="51"/>
+		<TotalItens Valor="52"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -129,10 +129,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="USUARIO" id="2">
-      <Left Valor="820"/>
-      <Top Valor="43"/>
+      <Left Valor="828"/>
+      <Top Valor="35"/>
       <Width Valor="202"/>
-      <Height Valor="121"/>
+      <Height Valor="136"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -144,8 +144,8 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_usuario" id="9">
-          <Left Valor="820"/>
-          <Top Valor="62"/>
+          <Left Valor="828"/>
+          <Top Valor="54"/>
           <Width Valor="200"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -165,8 +165,8 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="senha" id="10">
-          <Left Valor="820"/>
-          <Top Valor="80"/>
+          <Left Valor="828"/>
+          <Top Valor="72"/>
           <Width Valor="200"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -186,8 +186,8 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="nome_completo" id="11">
-          <Left Valor="820"/>
-          <Top Valor="98"/>
+          <Left Valor="828"/>
+          <Top Valor="90"/>
           <Width Valor="200"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -206,9 +206,30 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
+        <Campo nome="email" id="58">
+          <Left Valor="828"/>
+          <Top Valor="108"/>
+          <Width Valor="200"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(200)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
         <Campo nome="login" id="12">
-          <Left Valor="820"/>
-          <Top Valor="116"/>
+          <Left Valor="828"/>
+          <Top Valor="126"/>
           <Width Valor="200"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -228,8 +249,8 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_perfil" id="23">
-          <Left Valor="820"/>
-          <Top Valor="134"/>
+          <Left Valor="828"/>
+          <Top Valor="144"/>
           <Width Valor="200"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -310,8 +331,8 @@
       </Campos>
     </Tabela>
     <Tabela nome="PERFIL" id="4">
-      <Left Valor="840"/>
-      <Top Valor="230"/>
+      <Left Valor="848"/>
+      <Top Valor="229"/>
       <Width Valor="163"/>
       <Height Valor="68"/>
       <Fonte default="-1"/>
@@ -325,8 +346,8 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_perfil" id="15">
-          <Left Valor="840"/>
-          <Top Valor="249"/>
+          <Left Valor="848"/>
+          <Top Valor="248"/>
           <Width Valor="161"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -346,8 +367,8 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="ds_perfil" id="16">
-          <Left Valor="840"/>
-          <Top Valor="267"/>
+          <Left Valor="848"/>
+          <Top Valor="266"/>
           <Width Valor="161"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -640,8 +661,8 @@
       </Ligacoes>
     </LigaTabela>
     <LigaTabela nome="PERFIL_USUARIO_1" id="24">
-      <Left Valor="914"/>
-      <Top Valor="189"/>
+      <Left Valor="922"/>
+      <Top Valor="188"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -656,8 +677,8 @@
           <MostraCardinalidade Valor="-1" Card_id="25"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="25">
-              <Left Valor="921"/>
-              <Top Valor="215"/>
+              <Left Valor="929"/>
+              <Top Valor="214"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -682,8 +703,8 @@
           <MostraCardinalidade Valor="-1" Card_id="26"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="26">
-              <Left Valor="921"/>
-              <Top Valor="165"/>
+              <Left Valor="929"/>
+              <Top Valor="172"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -723,7 +744,7 @@
           <MostraCardinalidade Valor="-1" Card_id="29"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="29">
-              <Left Valor="782"/>
+              <Left Valor="790"/>
               <Top Valor="88"/>
               <Width Valor="40"/>
               <Height Valor="20"/>

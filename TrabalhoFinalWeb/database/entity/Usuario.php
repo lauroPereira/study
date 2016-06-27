@@ -4,6 +4,7 @@ class Usuario{
 	private $id;
 	private $login;
 	private $nomeCompleto;
+        private $email;
 	private $senha;
 	private $PerfilUsuario;
 	
@@ -26,6 +27,13 @@ class Usuario{
 	}
 	function getNomeCompleto(){
 		return $this->nomeCompleto;
+	}
+        
+        function setEmail($email){
+		$this->email = $email;
+	}
+	function getEmail(){
+		return $this->email;
 	}
 	
 	function setSenha($senha){
