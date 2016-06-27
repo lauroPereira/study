@@ -5,7 +5,8 @@ require_once 'database/model/TipoProdutoDto.php';
 class produtosController{
 
     private $view;
-    public $params;
+    private $params;
+    private $filter;
 
     function __construct() {
         $this->params = array();
@@ -20,40 +21,43 @@ class produtosController{
         $this->params["tipos"] = $tipoDto->selectAll();
     }
     
-    function actionFiltraPorTipo(){
+    function preparaFilter(){
+        //limpa filtro
+        $this->filter = array();
         
+        //Captura COOKIES
+        $idTipo = filter_input( INPUT_COOKIE, 'tp_prd', FILTER_SANITIZE_SPECIAL_CHARS);
+        $dsPrd  = filter_input( INPUT_COOKIE, 'ds_prd', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        //Valida se existe conteudo no COOKIE
+        if (!(!$idTipo || $idTipo == NULL)){
+            $this->filter["id_tipo"] = $idTipo;
+        }
+        
+        if (!(!$dsPrd|| $dsPrd == NULL)){
+            $this->filter["ds_produto"] = $dsPrd;
+        }
+        
+        //echo var_dump($this->filter);
+        
+    }
+    
+    function actionFilter(){
+        $this->preparaFilter();
         //instancia variaveis locais
-        $tipoDto = new TipoProdutoDto();
         $prdDto = new ProdutoDto();
 
-        //Captura COOKIE
-        $dsTipo = filter_input ( INPUT_COOKIE, 'tp_prd', FILTER_SANITIZE_SPECIAL_CHARS );
-	
+        $this->params["produtos"] = $prdDto->select($this->filter);
         
-        //Valida se existe conteudo no COOKIE
-        if (!$dsTipo || $dsTipo == NULL){
-            throw new Exception('Parametro não encontrado nos cookies.', 10001);
-        }
-        
-        //Busca produtos pela descricao
-        $tipos = $tipoDto->select(array("ds_tipo" => $dsTipo));
-
-        if(count($tipos)> 1){
-            throw new Exception('Mais de um tipo retornado para a mesma descricao.', 10002);
-        }
-        
-        $produtos = $prdDto->select(array("id_tipo" => $tipos[0]->getId()));
-        
-        if(count($produtos) <= 0){
-            throw new Exception('Não foram encontrados produtos com este filtro.', 10003);
-        }
-        
-        return $produtos;
-
     }
     
     function display(){
         require_once $this->view;
     }
+    
+   function __destruct() {
+        setcookie("cookie[tp_prd]", "");
+        setcookie("cookie[tp_prd]", "");
+   }
 
 }

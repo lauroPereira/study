@@ -1,8 +1,8 @@
 <div id="destaques" class="central">
-	<h2>Destaques</h2>
+	<h2>Produtos</h2>
 	<div id="tipoProd">
 		<label>Tipo: </label>
-                <select name="tipoProduto" onselect="alert(itemSelecionado);">
+                <select name="tipoProduto" id="slTipoProduto">
                     <option value="0" selected>Selecione</option>
                     <?php 
                         $tipo = new TipoProduto();
@@ -11,20 +11,38 @@
                         }
                     ?>
 		</select>
-                <pre>filtro:</pre>
-                <pre><?php echo filter_input( INPUT_COOKIE, 'tp_prd', FILTER_SANITIZE_SPECIAL_CHARS ); ?></pre>
 	</div>
 	<?php 
             $produto = new Produto();
-            foreach ($this->params["produtos"] as $produto){ ?>
-                <div
-			onclick="darkerShow();" id="produto_<?php echo $produto->getId();?>"
-			class="produto comFundo">
-			<img alt="adiciona produto" src="img/carrinho_peq.png" class="add" /><img
-				alt="produto2" src="img/produtos/<?php echo $produto->getLinkImage();?>" />
-			<pre><?php echo $produto->getDsProduto();?></pre>
-                        <pre><?php echo $produto->getPreco();?></pre>
-                        
-		</div>
-            <?php }?>
+            if(count($this->params["produtos"]) > 0){
+                foreach ($this->params["produtos"] as $produto){ ?>
+                    <div
+                            onclick="darkerShow();" id="produto_<?php echo $produto->getId();?>"
+                            class="produto comFundo">
+                            <img alt="adiciona produto" src="img/carrinho_peq.png" class="add" /><img
+                                    alt="produto2" src="img/produtos/<?php echo $produto->getLinkImage();?>" />
+                            <pre><?php echo $produto->getDsProduto();?></pre>
+                            <pre><?php echo $produto->getPreco();?></pre>
+
+                    </div>
+            <?php }
+            }else{
+                //Caso a busca nao retorne nada
+                $concat = (count($this->filter > 1))?' e ':'';
+                $msg = 'Nenhum resultado encontrado ';
+                if($this->filter["id_tipo"] != NULL){
+                    $tpDto = new TipoProdutoDto();
+                    $tp = $tpDto->find($this->filter["id_tipo"]);
+                    $msg .= 'com o tipo ' . $tp->getTipoProduto();
+                }
+                $msg .= $concat;
+                if($this->filter["ds_produto"] != NULL){
+                    $msg .= 'contendo o texto ' . $this->filter["ds_produto"];
+                }
+                $msg .= '!';
+                ?>
+                    <span><?php echo $msg; ?></span>
+                <?php
+            }
+?>
 </div>
